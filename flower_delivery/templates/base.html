@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Flower Delivery</title>
+    <!-- Подключение Bootstrap (CDN) -->
+    <link
+       rel="stylesheet"
+       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    >
+    <!-- Подключаем стили из static, если нужно -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Шапка сайта (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">Flower Delivery</a>
+        <button
+           class="navbar-toggler"
+           type="button"
+           data-bs-toggle="collapse"
+           data-bs-target="#navbarNav"
+           aria-controls="navbarNav"
+           aria-expanded="false"
+           aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'flower_list' %}">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cart_view' %}">Корзина</a>
+            </li>
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <!-- Если пользователь авторизован, показываем кнопку выхода -->
+                <a class="nav-link" href="{% url 'logout' %}">Выход</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Вход</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">Регистрация</a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Подключение JS (Bootstrap) -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
