@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Заказ оформлен!</h1>
+    <p>Спасибо за покупку. Номер вашего заказа: {{ order.order_key }}</p>
+    <p>Сумма заказа: {{ order.total_price }} руб.</p>
+    <a href="{% url 'flower_list' %}">Вернуться в каталог</a>
+</div>
+{% endblock %}
