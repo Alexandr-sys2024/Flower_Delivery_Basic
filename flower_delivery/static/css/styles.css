@@ -1,0 +1,112 @@
+/* styles.css */
+
+/* Общие стили для всего сайта */
+body {
+  background-color: #f8f9fa; /* Немного светлее фона Bootstrap */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; /* Небольшой акцент на заголовках */
+}
+
+/* Стили для Navbar */
+.navbar {
+  border-bottom: 2px solid #f1c40f; /* Тонкая жёлтая полоска снизу */
+}
+
+/* Ссылки в Navbar при наведении */
+.navbar-nav .nav-link:hover {
+  color: #e67e22 !important; /* Нежно-оранжевый при ховере */
+}
+
+/* Кнопки */
+.btn-primary {
+  background-color: #e67e22;
+  border-color: #e67e22;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #d35400;
+  border-color: #d35400;
+}
+
+/* Карточки (для каталога) */
+.card {
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover; /* Чтобы картинка обрезалась, если слишком большая */
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.card-text {
+  color: #666;
+}
+
+/* Отступы и общее оформление */
+.container {
+  margin-top: 1.5rem;
+}
+
+/* Сообщения (alert) внутри main-контейнера */
+.alert {
+  margin-top: 1rem;
+}
+
+/* Нижний отступ для row */
+.row {
+  margin-bottom: 1rem;
+}
+
+/* Если нужна кастомная стилизация ссылок */
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Стили для сообщения об ошибке/успехе в формах (если используете messages) */
+.alert-info,
+.alert-success,
+.alert-warning,
+.alert-danger {
+  margin-top: 1rem;
+}
+
+/* Пример стилизации формы логина и регистрации */
+form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form select,
+form textarea {
+  margin-bottom: 1rem;
+}
+
+/* Мелкая адаптация для мобильных устройств */
+@media (max-width: 576px) {
+  .card-img-top {
+    max-height: 150px;
+  }
+}
