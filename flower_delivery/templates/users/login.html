@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2>Вход</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <!-- Выводим сообщения об ошибках (если есть) -->
+        {% if messages %}
+          {% for message in messages %}
+            <p style="color:red;">{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+
+        <div class="mb-3">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" name="username" id="username" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password">Пароль:</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+
+    <p>Нет аккаунта? <a href="{% url 'register' %}">Зарегистрироваться</a></p>
+</div>
+{% endblock %}
