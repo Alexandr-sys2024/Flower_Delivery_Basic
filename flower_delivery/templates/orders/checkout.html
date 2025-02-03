@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Подтверждение заказа</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Товары в заказе:</p>
+        <ul>
+        {% for item in items %}
+          <li>{{ item.flower.name }} x {{ item.quantity }} ({{ item.price }} руб. за шт.)</li>
+        {% endfor %}
+        </ul>
+        <h4>Итого: {{ total_price }} руб.</h4>
+
+        <!-- Доп. поля для адреса, телефона, комментариев и т.д. -->
+        <button type="submit" class="btn btn-primary">Оформить заказ</button>
+    </form>
+</div>
+{% endblock %}
