@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Добро пожаловать в Flower Delivery!</h1>
+        <p>Здесь вы можете заказать красивые букеты с доставкой.
+           Мы предлагаем свежие цветы и быструю доставку.</p>
+
+        <div class="alert alert-success" role="alert">
+            Акция: при заказе от 3000 руб. — доставка бесплатно!
+        </div>
+
+        <p>Чтобы перейти к просмотру каталога, нажмите:
+            <a href="{% url 'flower_list' %}" class="btn btn-primary">Каталог</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
