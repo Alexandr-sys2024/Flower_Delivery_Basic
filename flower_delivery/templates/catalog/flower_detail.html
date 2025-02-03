@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ flower.name }}</h1>
+    <p>{{ flower.description }}</p>
+    <p>Цена: {{ flower.price }} руб.</p>
+    {% if flower.image %}
+        <img src="{{ flower.image.url }}" alt="{{ flower.name }}" style="max-width: 400px;">
+    {% else %}
+        <p>Нет изображения</p>
+    {% endif %}
+</div>
+{% endblock %}
