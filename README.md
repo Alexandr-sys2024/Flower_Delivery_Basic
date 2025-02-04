@@ -204,7 +204,7 @@ flower_delivery/
 1. **Клонируйте репозиторий**:
    ```sh
    git clone https://github.com/Alexandr-sys2024/Flower_Delivery_Basic
-   cd flower_delivery
+   cd Flower_Delivery_Basic
    ```
 
 2. **Создайте виртуальное окружение и установите зависимости**:
