@@ -199,11 +199,11 @@ flower_delivery/
 | `/users/register/`   | Регистрация нового пользователя  |
 | `/admin/`           | Панель администратора Django     |
 
-## 📦 Установка и запуск из ветки testing
+## 📦 Установка и запуск 
 
 1. **Клонируйте репозиторий**:
    ```sh
-   git clone https://github.com/yourusername/flower_delivery.git
+   git clone https://github.com/Alexandr-sys2024/Flower_Delivery_Basic
    cd flower_delivery
    ```
 
