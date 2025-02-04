@@ -303,16 +303,13 @@ flower_delivery/
 
 ### 📌 **Как запустить тесты?**
 
-Запуск всех тестов:
-```sh
-python manage.py test
 ```
 
 Запуск тестов для конкретного приложения:
 ```sh
-python manage.py test catalog
-python manage.py test orders
-python manage.py test users
+python manage.py test catalog.tests
+python manage.py test orders.tests
+python manage.py test users.tests
 ```
 
 Запуск тестов моделей:
